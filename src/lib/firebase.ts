@@ -1,12 +1,16 @@
 import { initializeApp, getApp, getApps } from "firebase/app";
+
+// Membaca kunci dari file .env.local
 const firebaseConfig = {
-  apiKey: "AIzaSyAQCRd174RPgEMmdBhdBVbWUkRCkUo7xWU",
-  authDomain: "dashboard-test-42c50.firebaseapp.com",
-  projectId: "dashboard-test-42c50",
-  storageBucket: "dashboard-test-42c50.firebasestorage.app",
-  messagingSenderId: "602908807104",
-  appId: "1:602908807104:web:1db55a9fdda5d58a200225",
-  measurementId: "G-VD50NZ6X0Y"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
+
+// Inisialisasi Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
 export default app;
