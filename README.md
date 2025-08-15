@@ -1,4 +1,4 @@
-Berikut versi **README** yang sudah distyling dan lebih rapi agar mudah dibaca dan profesional:
+
 
 ---
 
